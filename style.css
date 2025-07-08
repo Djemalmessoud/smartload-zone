@@ -126,3 +126,23 @@ body.dark-mode .dark-toggle {
   background-color: #ffffff; /* أبيض في الوضع الليلي */
   color: #e74c3c;            /* الأيقونة تصبح حمراء */
 }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #064420, #e74c3c, #111);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  color: #fff;
+  transition: background 0.5s ease, color 0.3s ease;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #e0e0e0;
+  }
