@@ -121,28 +121,53 @@ footer {
   background-color: #ff6b6b; /* أحمر أفتح عند التحويم */
   transform: scale(1.1);
 }
-
-body.dark-mode .dark-toggle {
-  background-color: #ffffff; /* أبيض في الوضع الليلي */
-  color: #e74c3c;            /* الأيقونة تصبح حمراء */
-}
+/* تنسيقات موحدة */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #064420, #e74c3c, #111);
+  background: linear-gradient(to right, #064420, #e74c3c, #111); /* الوضع العادي */
   background-size: 400% 400%;
   animation: gradientFlow 15s ease infinite;
   color: #fff;
   transition: background 0.5s ease, color 0.3s ease;
 }
 
+/* الوضع الليلي */
+body.dark-mode {
+  background: linear-gradient(to right, #121212, #e74c3c); /* تدرج ليلي */
+  color: #f1f1f1;
+}
+
+/* زر التبديل بين الأوضاع */
+.mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 16px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 9999;
+  transition: background 0.3s ease;
+}
+
+.mode-toggle:hover {
+  background-color: #c0392b;
+}
+
+/* حركة التدرج للخلفية */
 @keyframes gradientFlow {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-body.dark-mode {
-  background: #121212;
-  color: #e0e0e0;
+/* الهيدر */
+header {
+  text-align: center;
+  padding: 80px 20px;
   }
+
