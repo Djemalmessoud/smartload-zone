@@ -97,36 +97,32 @@ footer {
   margin-top: 50px;
   font-size: 14px;
   border-top: 4px solid #064e3b;
-}
-body.dark-mode {
-  background: linear-gradient(to bottom, #121212, #1e1e1e);
-  color: #eeeeee;
-}
-
-body.dark-mode header,
-body.dark-mode nav,
-body.dark-mode footer {
-  background: linear-gradient(to right, #1c1c1c, #2a2a2a);
-  color: #ffffff;
-}
-
-body.dark-mode nav a {
-  color: #cccccc;
-}
-
-body.dark-mode nav a:hover {
-  color: #ff6b6b;
-}
-
-body.dark-mode .btn {
-  background: linear-gradient(to right, #333, #555);
-  color: #ffffff;
+.dark-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 44px;
+  height: 44px;
+  background-color: #e74c3c; /* أحمر فاتح */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-body.dark-mode .btn:hover {
-  background: linear-gradient(to right, #444, #666);
+.dark-toggle:hover {
+  background-color: #ff6b6b; /* أحمر أفتح عند التحويم */
+  transform: scale(1.1);
 }
 
-body.dark-mode .social a {
-  color: #cccccc;
-                              }
+body.dark-mode .dark-toggle {
+  background-color: #ffffff; /* أبيض في الوضع الليلي */
+  color: #e74c3c;            /* الأيقونة تصبح حمراء */
+}
