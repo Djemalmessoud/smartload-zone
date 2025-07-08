@@ -170,4 +170,31 @@ header {
   text-align: center;
   padding: 80px 20px;
   }
+.social-folder {
+  text-align: center;
+  margin-top: 40px;
+}
 
+.social-folder h3 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.social-icons a img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+  }
